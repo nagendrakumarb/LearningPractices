@@ -1,2 +1,2 @@
-# Setups
-Common Setups
+# Technical
+Common Practices
