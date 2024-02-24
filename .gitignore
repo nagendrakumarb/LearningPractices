@@ -10,3 +10,6 @@
 /kafka.pubsub/Producer/obj
 /kafka.pubsub/Consumer/bin/Debug/netcoreapp3.1
 /kafka.pubsub/Producer/bin/Debug/netcoreapp3.1
+/MYProgress/.vs
+/MYProgress/bin/Debug/net8.0-windows
+/MYProgress/obj

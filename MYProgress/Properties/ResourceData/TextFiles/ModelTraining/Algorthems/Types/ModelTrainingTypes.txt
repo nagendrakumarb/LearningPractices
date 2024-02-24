@@ -1,0 +1,10 @@
+Supervised Learning
+Unsupervised Learning
+Semi-Supervised Learning
+Reinforcement Learning
+Transfer Learning
+Online Learning
+Ensemble Learning
+Self-Supervised Learning
+Multi-instance Learning
+Meta-Learning

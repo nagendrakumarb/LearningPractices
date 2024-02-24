@@ -1,0 +1,6 @@
+Q Learning
+Deep Q Networks (DQN)
+Policy Gradient Methods
+Actor Critic Models
+Proximal Policy Optimization (PPO)
+Deep Deterministic Policy Gradients (DDPG)

@@ -1,0 +1,3 @@
+Diverse Density
+Multi Instance Support Vector Machines (MI-SVM)
+Multi Instance Neural Network

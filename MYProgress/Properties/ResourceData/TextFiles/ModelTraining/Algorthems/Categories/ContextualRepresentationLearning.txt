@@ -1,0 +1,3 @@
+Word2Vec
+Contrastive Learning
+BERT (Bidirectional Encoder Representations from Transformers)

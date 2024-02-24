@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="ActionCenterData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MYCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TaskModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
