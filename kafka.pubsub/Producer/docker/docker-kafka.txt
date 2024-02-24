@@ -1,0 +1,15 @@
+docker run -d --network=kafka --name=zookeeper -e  ZOOKEEPER_CLIENT_PORT=2181 -e ZOOKEEPER_TICK_TIME=2000 -p 2181:2181 confluentinc/cp-zookeeper
+docker logs zookeeper
+
+docker run -d --network=kafka --name=kafka -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 confluentinc/cp-kafka
+
+kafka-topics.bat --create --bootstrap-server HP-ClientServer:9092 --replication-factor 1 --partitions 1 --topic testtopic
+kafka-topics.bat --bootstrap-server 192.168.1.2:9092 --delete --topic testtopic
+
+Movie secret key - Covert Picture key
+Saml secret key - Clandestine Image key
+Stealthy Image key - Surreptitious Representation key
+
+https://youtu.be/PcKhZgcKQPQ?t=2290
+takkar-u still ddint understand? intlo pelli vidilo puli
+

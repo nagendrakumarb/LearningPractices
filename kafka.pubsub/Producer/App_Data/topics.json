@@ -1,0 +1,7 @@
+{
+  "GeneralTopic": {
+    "Name": "GeneralTopic",
+    "NumPartitions": 1,
+    "ReplicationFactor": 1
+  }
+}

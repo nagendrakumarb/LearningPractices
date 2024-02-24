@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a507a674-5399-47c6-80bd-a531f404cdca</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>IUnKnown.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ErikssonPenker.OCRRequestSchedulesProvider</Name>
+    <RootNamespace>IUnKnown</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="IUnKnown.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Samples\chinese.jpg" />
+    <Content Include="Images\Samples\english.png" />
+    <Content Include="Images\Samples\example.png" />
+    <Content Include="Images\Samples\example2.png" />
+    <Content Include="Images\Samples\example3.png" />
+    <Content Include="Images\Samples\french.jpg" />
+    <Content Include="Images\Samples\japanese.jpg" />
+    <Content Include="Images\Samples\korean.png" />
+    <Content Include="Images\Samples\thai.jpg" />
+    <Content Include="Images\Samples\width_ths.png" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="Images\Samples\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
