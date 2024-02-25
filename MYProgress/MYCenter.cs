@@ -4,7 +4,6 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
 namespace MYProgressAdmin
 {
     public partial class MYCenter : Form
@@ -13,11 +12,11 @@ namespace MYProgressAdmin
         private string ConnectionString = "";
         private DataTable taskModelTable;
         private int editedRowIndex = -1;
-        private  CommandModelRequest commandModelRequest;
+        private CommandModelRequest commandModelRequest;
         public MYCenter()
         {
             InitializeComponent();
- 
+
             var s = SumSubarrayMins([3, 1, 2, 4]);
             foreach (ConnectionStringSettings connection in ConfigurationManager.ConnectionStrings)
             {
@@ -173,7 +172,6 @@ namespace MYProgressAdmin
                 }
             }
         }
-
 
         private UserActionStatus CalculateParentStatus(TreeNode parentNode, UserActionStatus status)
         {
@@ -665,8 +663,8 @@ namespace MYProgressAdmin
 
 
         }
- 
- 
+
+
         // Event handler for Cancel button
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -675,7 +673,7 @@ namespace MYProgressAdmin
         }
 
         // Event handler for generating random data
-       
+
 
         private void btnUploadData_Click(object sender, EventArgs e)
         {
@@ -691,21 +689,21 @@ namespace MYProgressAdmin
                      ((ActionCenterData)node.Tag).Status == UserActionStatus.InProgress);
 
                 switch (true)
-            {
-                case true when rbCSV.Checked:
+                {
+                    case true when rbCSV.Checked:
                         // Handle CSV checked condition
                         commandModelRequest = new CommandModelRequest()
                         {
                             ActionId = actionNode.ActionId,
                             ActionName = treeViewMYActions.SelectedNode.Text,
-                            ActionSourceId= actionSourceNode.ActionId,
-                            ActionSource= treeViewMYActions.SelectedNode.Parent.Text,
-                            UserId="dbo",
-                            UploadSourceType= UploadFileSourceTypesEnum.Csv
+                            ActionSourceId = actionSourceNode.ActionId,
+                            ActionSource = treeViewMYActions.SelectedNode.Parent.Text,
+                            UserId = "dbo",
+                            UploadSourceType = UploadFileSourceTypesEnum.Csv
                         };
-                    break;
+                        break;
 
-                case true when rbImage.Checked:
+                    case true when rbImage.Checked:
                         // Handle Image checked condition
                         commandModelRequest = new CommandModelRequest()
                         {
@@ -713,23 +711,23 @@ namespace MYProgressAdmin
                             ActionName = treeViewMYActions.SelectedNode.Text,
                             ActionSourceId = actionSourceNode.ActionId,
                             ActionSource = treeViewMYActions.SelectedNode.Parent.Text,
-                            Status= actionNode.Status,
+                            Status = actionNode.Status,
                             UserId = "dbo",
                             UploadSourceType = UploadFileSourceTypesEnum.Image
                         };
                         break;
 
-                default:
-                    // Handle other cases
-                    MessageBox.Show("Select Upload File Source Type.", "Csv or Any Image", MessageBoxButtons.OK, icon: MessageBoxIcon.Asterisk);
-                    return;
-            }
-            // Create an instance of the form you want to show
-            DataUploadAndInputForm imageForm = new DataUploadAndInputForm("Data Processor", "TreeMindRootSeed", commandModelRequest);
+                    default:
+                        // Handle other cases
+                        MessageBox.Show("Select Upload File Source Type.", "Csv or Any Image", MessageBoxButtons.OK, icon: MessageBoxIcon.Asterisk);
+                        return;
+                }
+                // Create an instance of the form you want to show
+                DataUploadAndInputForm imageForm = new DataUploadAndInputForm("Data Processor", "TreeMindRootSeed", commandModelRequest);
 
                 // Show the form modelessly
                 imageForm.Show();
-              
+
             }
             else
             {

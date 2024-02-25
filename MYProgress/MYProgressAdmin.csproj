@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MainForm.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainForm.resx" />
     <EmbeddedResource Remove="Stage.resx" />
   </ItemGroup>
 
